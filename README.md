@@ -27,11 +27,12 @@ npm run bulk
 - single: 특정 data.json 을 기준으로 일치하는 Schema 를 찾습니다.
   - 장점: 매핑 파일이 필요하지 않다.
   - 단점: 일치하지 않는 Schema 도 모두 validate 함수 호출
+  
+Data, Schema 모두에 ID 를 넣고 이를 data-schema 상호 식별기준으로 삼을 경우
+- 장점
+  - data.json 만 보고 이 데이터가 어떤 Schema 를 따라야 하는지 알 수 있다.
+    - 처음 해당 코드들을 접한 사람도 직관적으로 아 이게 schema 를 바라보겠구나 추측할 수 있다. (아마도?) 
+- 단점: ?
 
----
-
-Data, Schema 모두에 ID 를 넣게 되었을때
-- 장점: data.json 만 보고 이 데이터가 어떤 Schema 를 따라야 하는지 알 수 있다.
-- 단점: data.json 의 id 와 schema.json 의 $id 를 기준으로 할것인지 아니면 다른 기준으로 할 것인지... 모호하다.
-
-
+# 결론
+함부로 훈수두지말것 ... 껄껄
