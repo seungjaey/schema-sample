@@ -1,0 +1,21 @@
+{
+  "title": "Kulry 푸바",
+  "$id": "other",
+  "description": "대충 다른 타입의 데이터임 1",
+  "type": "object",
+  "properties": {
+    "foo": {
+      "type": "string",
+      "enum": ["foo"]
+    },
+    "bar": {
+      "type": "string",
+      "enum": ["bar"]
+    }
+  },
+  "required": [
+    "foo",
+    "bar"
+  ],
+  "additionalProperties": false
+}

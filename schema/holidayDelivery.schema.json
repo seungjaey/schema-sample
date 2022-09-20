@@ -1,0 +1,79 @@
+{
+  "title": "Kulry 휴일 배송 안내",
+  "$id": "holiday_delivery",
+  "description": "대충 휴일일때 안내려할고함",
+  "type": "object",
+  "definitions": {
+    "holidayContent": {
+      "type": "object",
+      "properties": {
+        "startDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "endDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "startDate",
+        "endDate",
+        "description"
+      ]
+    }
+  },
+  "properties": {
+    "regionCode": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "A",
+          "R",
+          "C",
+          "X",
+          "F",
+          "M",
+          "I",
+          "Y",
+          "H",
+          "D",
+          "B",
+          "S",
+          "T",
+          "G",
+          "Z",
+          "W"
+        ]
+      }
+    },
+    "ALL": {
+      "$ref": "#/definitions/holidayContent"
+    },
+    "AA": {
+      "$ref": "#/definitions/holidayContent"
+    },
+    "AB": {
+      "$ref": "#/definitions/holidayContent"
+    },
+    "BS": {
+      "$ref": "#/definitions/holidayContent"
+    },
+    "UL": {
+      "$ref": "#/definitions/holidayContent"
+    }
+  },
+  "required": [
+    "regionCode",
+    "ALL",
+    "AA",
+    "AB",
+    "BS",
+    "UL"
+  ],
+  "additionalProperties": false
+}
